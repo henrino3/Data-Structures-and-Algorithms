@@ -7,7 +7,7 @@ public class LinkedList {
 	public LinkedList() {
 		head = null;
 	}
-	//    add(int position, E element) -> Inserts element at position.
+ 
 	public void addAtIndex(int data, int position){
 		if(position == 1){
 			addAtBegin(data);
@@ -21,7 +21,7 @@ public class LinkedList {
 		}
 		if(position<=len && position >1){
 			Node n = new Node(data);
-			Node currNode = head; //so index is already 1
+			Node currNode = head; 
 			while((position-2)>0){
 				System.out.println(currNode.data);
 				currNode=currNode.next;
@@ -33,7 +33,7 @@ public class LinkedList {
 		}
 	}
 	
-//    insertBefore(E elem1, E elem2) -> Insert elem2 before elem1.
+ 
 	public void addAtBegin(int data) {
 		Node n = new Node(data);
 		n.next = head;
@@ -41,7 +41,7 @@ public class LinkedList {
 		size++;
 	}
 	
-//    insertAfter(E elem1, E elem2) -> Insert elem2 after elem1.
+ 
 	public void addAtEnd(int data) {
 		if (head == null) {
 			addAtBegin(data);
@@ -56,12 +56,12 @@ public class LinkedList {
 		}
 	}
 	
-//    size() -> Returns the total number of nodes in the list.
+ 
 	public int getSize(){
 		return size;
 	}
 	
-//    contains(E element) -> Returns true if element is in the list, false otherwise.
+ 
 	public int contains(int data){
 		Node n = head;
 		int count = 1;
@@ -76,9 +76,9 @@ public class LinkedList {
 		return -1;
 	}
 	
-//    head() -> Returns the first node in the list.
-//    tail() -> Returns the last node in the list.
-//    remove(E element) -> Removes element from the list.
+ 
+ 
+ 
 
 	public int deleteAtBegin() {
 		int tmp = head.data;
@@ -101,9 +101,9 @@ public class LinkedList {
 		}
 	}
 	
-//    isEmpty() -> Returns true if the list has no elements, false otherwise.
-//    reverse() -> Reverses the array.
-//    toString() -> Returns a nice String representation of the nodes in the list.
+ 
+ 
+ 
 	public void display() {
 		System.out.println("");
 		Node currNode = head;
